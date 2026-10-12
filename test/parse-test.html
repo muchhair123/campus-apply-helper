@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta charset="UTF-8" /><title>解析测试</title></head>
+<body>
+  <h3>简历解析测试</h3>
+  <pre id="out">加载库中…</pre>
+  <script src="mock-chrome.js"></script>
+  <script src="../lib/vendor/pdf.min.js"></script>
+  <script src="../lib/vendor/mammoth.browser.min.js"></script>
+  <script src="../lib/resume-parser.js"></script>
+  <script>
+    const out = document.getElementById('out');
+    window.__parsePdf = async function (url) {
+      const resp = await fetch(url);
+      const blob = await resp.blob();
+      const file = new File([blob], 'resume.pdf', { type: 'application/pdf' });
+      const draft = await window.AH_ResumeParser.parseResume(file);
+      return draft;
+    };
+    out.textContent = 'ready. pdfjsLib=' + (!!window.pdfjsLib) + ' mammoth=' + (!!window.mammoth);
+  </script>
+</body>
+</html>

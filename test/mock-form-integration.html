@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>某银行校园招聘 - 网申（集成测试）</title>
+  <style>
+    body { font-family: sans-serif; max-width: 700px; margin: 20px auto; }
+    .row { margin: 10px 0; }
+    .form-item { margin: 10px 0; }
+    .ant-form-item-label { color: #333; display:inline-block; width:120px; }
+    table { border-collapse: collapse; }
+    td { padding: 6px; border: 1px solid #eee; }
+    input, select { padding: 5px; }
+  </style>
+</head>
+<body>
+  <h1>某某银行</h1>
+  <h2>校园招聘网上申请</h2>
+  <div class="row"><label for="xm">姓名</label> <input id="xm" type="text"></div>
+  <div class="row"><label for="sjh">手机号码</label> <input id="sjh" type="text"></div>
+  <div class="row"><label for="em">电子邮箱</label> <input id="em" type="email"></div>
+  <div class="row"><label for="sfz">身份证号码</label> <input id="sfz" type="text"></div>
+  <div class="row"><input id="p1" placeholder="请输入政治面貌"></div>
+  <div class="row"><label for="xl">最高学历</label>
+    <select id="xl"><option value="">请选择</option><option>大专</option><option>本科</option><option>硕士</option><option>博士</option></select></div>
+  <div class="form-item"><div class="ant-form-item-label"><label>毕业院校</label></div><input id="xx" type="text"></div>
+  <table>
+    <tr><td>籍贯</td><td><input id="jg" type="text"></td></tr>
+    <tr><td>现居住地</td><td><input id="xjd" type="text"></td></tr>
+  </table>
+  <div class="row">性别：
+    <label for="g1"><input id="g1" type="radio" name="gender" value="男">男</label>
+    <label for="g2"><input id="g2" type="radio" name="gender" value="女">女</label></div>
+  <div class="row"><label for="jtcy">家庭成员主要社会关系</label><input id="jtcy" type="text"></div>
+
+  <!-- Element UI 父母字段：预填值，模拟用户手填后测「存回信息库」 -->
+  <div class="el-form">
+    <div class="el-form-item"><div class="el-form-item__label">姓名-父亲</div>
+      <div class="el-form-item__content"><div class="el-input"><input id="fName" class="el-input__inner" value="张大山"></div></div></div>
+    <div class="el-form-item"><div class="el-form-item__label">工作单位-父亲</div>
+      <div class="el-form-item__content"><div class="el-input"><input id="fComp" class="el-input__inner" value="北京某国企"></div></div></div>
+    <div class="el-form-item"><div class="el-form-item__label">父亲是否为邮储银行体系内单位员工</div>
+      <div class="el-form-item__content"><div class="el-input"><input id="bankQ" class="el-input__inner" value="否"></div></div></div>
+  </div>
+
+  <script src="mock-chrome.js"></script>
+  <script>
+    // 预置 profile 到 mock storage
+    chrome.storage.local.set({ profile: {
+      basic: { name: '张三', phone: '13800138000', email: 'zhangsan@example.com',
+               idCard: '110101199001011234', gender: '男', politicalStatus: '共青团员',
+               nativePlace: '北京', currentCity: '上海' },
+      education: [{ school: '清华大学', major: '计算机科学与技术', degree: '硕士' }],
+    }});
+  </script>
+  <script src="../lib/profile-schema.js"></script>
+  <script src="../lib/field-matcher.js"></script>
+  <script src="../content/content.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>回写归模块 + 字段改名 测试</title>
+  <style>
+    body { font-family: sans-serif; max-width: 640px; margin: 20px auto; }
+    section { border: 1px solid #eee; border-radius: 8px; padding: 12px; margin: 14px 0; }
+    section h3 { margin: 0 0 10px; }
+    .el-form-item { margin: 10px 0; display: flex; align-items: center; gap: 10px; }
+    .el-form-item__label { width: 140px; color: #333; }
+    .el-input__inner { padding: 6px 10px; border: 1px solid #dcdfe6; border-radius: 4px; width: 240px; }
+  </style>
+</head>
+<body>
+  <h2>某公司网申（回写归模块测试）</h2>
+
+  <!-- 区块1：教育经历（标题能匹配内置模块「教育经历」）-->
+  <section>
+    <h3>教育经历</h3>
+    <div class="el-form">
+      <div class="el-form-item"><div class="el-form-item__label">生源地类别</div>
+        <div class="el-form-item__content"><div class="el-input"><input class="el-input__inner" value="城镇"></div></div></div>
+    </div>
+  </section>
+
+  <!-- 区块2：其他信息（无法归类）-->
+  <section>
+    <h3>其他信息</h3>
+    <div class="el-form">
+      <div class="el-form-item"><div class="el-form-item__label">血型</div>
+        <div class="el-form-item__content"><div class="el-input"><input class="el-input__inner" value="O型"></div></div></div>
+    </div>
+  </section>
+
+  <script src="mock-chrome.js"></script>
+  <script>
+    chrome.storage.local.set({ customSchema: { groups: [] }, profile: {} });
+  </script>
+  <script src="../lib/profile-schema.js"></script>
+  <script src="../lib/field-matcher.js"></script>
+  <script src="../content/content.js"></script>
+</body>
+</html>

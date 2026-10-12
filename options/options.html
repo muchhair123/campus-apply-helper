@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>校招网申助手 — 设置</title>
+  <link rel="stylesheet" href="options.css" />
+</head>
+<body>
+  <div class="topbar">
+    <div class="brand">📝 校招网申助手</div>
+    <div class="tabs">
+      <button class="tab active" data-tab="profile">个人信息库</button>
+      <button class="tab" data-tab="applications">投递记录</button>
+    </div>
+    <div class="spacer"></div>
+    <button class="tool-btn" id="btn-export">导出备份</button>
+    <button class="tool-btn" id="btn-import">导入备份</button>
+    <input type="file" id="import-file" accept="application/json" hidden />
+  </div>
+
+  <div class="page">
+    <!-- ===== Tab 1: 个人信息库 ===== -->
+    <section class="panel active" id="panel-profile">
+      <!-- 简历上传 -->
+      <div class="upload-box">
+        <p><strong>上传简历自动填充</strong>（支持 PDF / Word / LaTeX，解析后需你确认）</p>
+        <input type="file" id="resume-file" accept=".pdf,.docx,.tex,.txt,.md" hidden />
+        <button class="btn primary" id="btn-upload-resume">选择简历文件</button>
+        <p class="filename" id="resume-filename"></p>
+        <p id="resume-status"></p>
+      </div>
+
+      <!-- 草稿确认条（解析后出现） -->
+      <div class="draft-banner" id="draft-banner" style="display:none">
+        <span>⚠️ 已从简历解析出部分字段并填入下方表单，请核对后保存。</span>
+        <span class="grow"></span>
+        <button class="btn sm" id="btn-draft-dismiss">忽略草稿</button>
+      </div>
+
+      <!-- 字段表单（由 JS 按 schema 渲染） -->
+      <div id="profile-form"></div>
+    </section>
+
+    <!-- ===== Tab 2: 投递记录 ===== -->
+    <section class="panel" id="panel-applications">
+      <div class="apps-toolbar">
+        <input type="text" class="search" id="apps-search" placeholder="搜索公司 / 岗位…" />
+        <select id="apps-filter-status">
+          <option value="">全部状态</option>
+          <option value="已投递">已投递</option>
+          <option value="笔试">笔试</option>
+          <option value="面试">面试</option>
+          <option value="offer">offer</option>
+          <option value="挂了">挂了</option>
+        </select>
+        <button class="btn primary" id="btn-add-app">+ 手动添加</button>
+      </div>
+      <div id="apps-table-wrap"></div>
+    </section>
+  </div>
+
+  <!-- 信息库底部保存条（仅 profile tab 显示） -->
+  <div class="savebar" id="savebar">
+    <span class="status" id="save-status"></span>
+    <button class="btn" id="btn-reset">撤销修改</button>
+    <button class="btn primary" id="btn-save">保存信息库</button>
+  </div>
+
+  <script src="../lib/profile-schema.js"></script>
+  <script src="../lib/storage.js"></script>
+  <script src="../lib/vendor/pdf.min.js"></script>
+  <script src="../lib/vendor/mammoth.browser.min.js"></script>
+  <script src="../lib/resume-parser.js"></script>
+  <script src="options.js"></script>
+</body>
+</html>

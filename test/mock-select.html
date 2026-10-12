@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>Element UI 下拉自动填 测试</title>
+  <style>
+    body { font-family: sans-serif; max-width: 640px; margin: 20px auto; }
+    .el-form-item { margin: 14px 0; display: flex; align-items: center; gap: 10px; }
+    .el-form-item__label { width: 160px; color: #333; }
+    .el-input__inner { padding: 6px 10px; border: 1px solid #dcdfe6; border-radius: 4px; width: 240px; }
+    /* 模拟 Element UI 下拉浮层 */
+    .el-select-dropdown { position: absolute; background: #fff; border: 1px solid #e4e7ed; border-radius: 4px;
+      box-shadow: 0 2px 12px rgba(0,0,0,.1); z-index: 2000; padding: 6px 0; }
+    .el-select-dropdown__item { padding: 8px 20px; cursor: pointer; }
+    .el-select-dropdown__item:hover { background: #f5f7fa; }
+    .el-select-dropdown__item.is-disabled { color: #c0c4cc; cursor: not-allowed; }
+  </style>
+</head>
+<body>
+  <h2>某国企网申（Element UI 下拉测试）</h2>
+  <div class="el-form">
+    <!-- A. 精确匹配：性别 男 -->
+    <div class="el-form-item">
+      <div class="el-form-item__label">性别</div>
+      <div class="el-form-item__content"><div class="el-select">
+        <div class="el-input"><input class="el-input__inner" readonly placeholder="请选择" data-opts="男,女"></div>
+      </div></div>
+    </div>
+    <!-- B. 后缀差异匹配：信息库"硕士" ↔ 选项"硕士研究生" -->
+    <div class="el-form-item">
+      <div class="el-form-item__label">学历</div>
+      <div class="el-form-item__content"><div class="el-select">
+        <div class="el-input"><input class="el-input__inner" readonly placeholder="请选择" data-opts="博士研究生,硕士研究生,本科,大专,高中"></div>
+      </div></div>
+    </div>
+    <!-- C. 零匹配：选项里没有信息库的"团员"（选项是政治面貌全集但故意不含"团员"写法差异）-->
+    <div class="el-form-item">
+      <div class="el-form-item__label">婚姻状况</div>
+      <div class="el-form-item__content"><div class="el-select">
+        <div class="el-input"><input class="el-input__inner" readonly placeholder="请选择" data-opts="已婚,离异,丧偶"></div>
+      </div></div>
+    </div>
+    <!-- D. 歧义：多个候选都包含目标（信息库"本科" ↔ 选项有"本科"和"本科（第二学位）"）-->
+    <div class="el-form-item">
+      <div class="el-form-item__label">培养方式</div>
+      <div class="el-form-item__content"><div class="el-select">
+        <div class="el-input"><input class="el-input__inner" readonly placeholder="请选择" data-opts="全日制定向,全日制非定向,非全日制定向"></div>
+      </div></div>
+    </div>
+  </div>
+
+  <script src="mock-chrome.js"></script>
+  <script>
+    // ===== 模拟 Element UI 下拉行为：点 input 创建浮层，点选项回填并移除浮层 =====
+    document.querySelectorAll('.el-input__inner[data-opts]').forEach((inp) => {
+      inp.addEventListener('click', () => {
+        // 已有浮层则移除（toggle）
+        document.querySelectorAll('.el-select-dropdown').forEach((d) => d.remove());
+        const opts = inp.dataset.opts.split(',');
+        const dd = document.createElement('div');
+        dd.className = 'el-select-dropdown';
+        const rect = inp.getBoundingClientRect();
+        dd.style.left = rect.left + 'px';
+        dd.style.top = (rect.bottom + window.scrollY + 2) + 'px';
+        opts.forEach((o) => {
+          const it = document.createElement('div');
+          it.className = 'el-select-dropdown__item';
+          it.textContent = o;
+          it.addEventListener('click', () => {
+            inp.value = o;
+            inp.dispatchEvent(new Event('input', { bubbles: true }));
+            inp.dispatchEvent(new Event('change', { bubbles: true }));
+            dd.remove();
+          });
+          dd.appendChild(it);
+        });
+        document.body.appendChild(dd);
+      });
+      // ESC / 点别处收起
+      inp.addEventListener('keydown', (e) => { if (e.key === 'Escape') document.querySelectorAll('.el-select-dropdown').forEach((d) => d.remove()); });
+    });
+    document.body.addEventListener('click', (e) => {
+      if (!e.target.closest('.el-select-dropdown') && !e.target.closest('.el-input__inner')) {
+        document.querySelectorAll('.el-select-dropdown').forEach((d) => d.remove());
+      }
+    });
+
+    // 预置 profile：性别男、学历硕士、婚姻未婚(选项没有→零匹配)、培养方式全日制(多候选含→歧义)
+    chrome.storage.local.set({ profile: {
+      basic: { gender: '男', maritalStatus: '未婚' },
+      education: [{ degree: '硕士', studyMode: '全日制' }],
+    }});
+  </script>
+  <script src="../lib/profile-schema.js"></script>
+  <script src="../lib/field-matcher.js"></script>
+  <script src="../content/content.js"></script>
+</body>
+</html>

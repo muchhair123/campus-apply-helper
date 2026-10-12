@@ -1,0 +1,10 @@
+# 个人隐私：含真实简历信息，禁止上传
+我的信息库-导入.json
+*-导入.json
+my-profile*.json
+
+# 系统/编辑器杂项
+.DS_Store
+.playwright-mcp/
+*.log
+node_modules/

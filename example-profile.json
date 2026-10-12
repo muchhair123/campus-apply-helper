@@ -1,0 +1,144 @@
+{
+  "__app__": "校招网申助手",
+  "__version__": 1,
+  "profile": {
+    "basic": {
+      "name": "",
+      "gender": "",
+      "phone": "",
+      "email": "",
+      "wechat": "",
+      "birthDate": "",
+      "ethnicity": "",
+      "nativePlace": "",
+      "politicalStatus": "",
+      "maritalStatus": "",
+      "idCard": "",
+      "currentCity": "",
+      "householdCity": ""
+    },
+    "education": [
+      {
+        "school": "",
+        "college": "",
+        "major": "",
+        "degree": "",
+        "academicDegree": "",
+        "enrollDate": "",
+        "graduateDate": "",
+        "gpa": "",
+        "rank": "",
+        "studyMode": "",
+        "isUnified": ""
+      }
+    ],
+    "work": [
+      {
+        "company": "",
+        "title": "",
+        "startDate": "",
+        "endDate": "",
+        "description": ""
+      },
+      {
+        "company": "",
+        "title": "",
+        "startDate": "",
+        "endDate": "",
+        "description": ""
+      },
+      {
+        "company": "",
+        "title": "",
+        "startDate": "",
+        "endDate": "",
+        "description": ""
+      }
+    ],
+    "project": [
+      {
+        "projectName": "",
+        "role": "",
+        "startDate": "",
+        "endDate": "",
+        "description": ""
+      },
+      {
+        "projectName": "",
+        "role": "",
+        "startDate": "",
+        "endDate": "",
+        "description": ""
+      },
+      {
+        "projectName": "",
+        "role": "",
+        "startDate": "",
+        "endDate": "",
+        "description": ""
+      }
+    ],
+    "skill": {
+      "cet4": "",
+      "cet6": "",
+      "englishOther": "",
+      "computerLevel": "",
+      "certificates": "",
+      "skills": "",
+      "driverLicense": ""
+    },
+    "award": [
+      {
+        "awardName": "",
+        "awardDate": "",
+        "awardLevel": ""
+      },
+      {
+        "awardName": "",
+        "awardDate": "",
+        "awardLevel": ""
+      },
+      {
+        "awardName": "",
+        "awardDate": "",
+        "awardLevel": ""
+      },
+      {
+        "awardName": "",
+        "awardDate": "",
+        "awardLevel": ""
+      },
+      {
+        "awardName": "",
+        "awardDate": "",
+        "awardLevel": ""
+      }
+    ],
+    "family": [],
+    "familyFlat": {
+      "fatherName": "",
+      "fatherAge": "",
+      "fatherCompany": "",
+      "fatherTitle": "",
+      "fatherPhone": "",
+      "fatherPolitical": "",
+      "motherName": "",
+      "motherAge": "",
+      "motherCompany": "",
+      "motherTitle": "",
+      "motherPhone": "",
+      "motherPolitical": ""
+    },
+    "intention": {
+      "expectedCity": "",
+      "expectedPosition": "",
+      "expectedSalary": "",
+      "availableDate": "",
+      "selfIntro": ""
+    }
+  },
+  "applications": [],
+  "settings": {
+    "autoOpenSidebar": false
+  }
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <div class="header">
+    <span class="logo">📝</span>
+    <span class="title">校招网申助手</span>
+  </div>
+
+  <div class="actions">
+    <button id="btn-sidebar" class="btn primary">在当前页面打开侧边栏</button>
+    <button id="btn-profile" class="btn">个人信息库</button>
+    <button id="btn-apps" class="btn">投递记录</button>
+  </div>
+
+  <div class="stats" id="stats">
+    <div class="stat"><span id="stat-filled" class="num">—</span><span class="lbl">已填字段</span></div>
+    <div class="stat"><span id="stat-apps" class="num">—</span><span class="lbl">投递记录</span></div>
+  </div>
+
+  <div class="hint" id="hint"></div>
+
+  <script src="../lib/storage.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

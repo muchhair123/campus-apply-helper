@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>options 测试</title>
+  <link rel="stylesheet" href="../options/options.css" />
+  <script src="mock-chrome.js"></script>
+</head>
+<body>
+  <div class="topbar">
+    <div class="brand">📝 校招网申助手</div>
+    <div class="tabs">
+      <button class="tab active" data-tab="profile">个人信息库</button>
+      <button class="tab" data-tab="applications">投递记录</button>
+    </div>
+    <div class="spacer"></div>
+    <button class="tool-btn" id="btn-export">导出备份</button>
+    <button class="tool-btn" id="btn-import">导入备份</button>
+    <input type="file" id="import-file" accept="application/json" hidden />
+  </div>
+  <div class="page">
+    <section class="panel active" id="panel-profile">
+      <div class="upload-box">
+        <p><strong>上传简历自动填充</strong></p>
+        <input type="file" id="resume-file" accept=".pdf,.docx,.tex,.txt,.md" hidden />
+        <button class="btn primary" id="btn-upload-resume">选择简历文件</button>
+        <p class="filename" id="resume-filename"></p>
+        <p id="resume-status"></p>
+      </div>
+      <div class="draft-banner" id="draft-banner" style="display:none">
+        <span>⚠️ 草稿</span><span class="grow"></span>
+        <button class="btn sm" id="btn-draft-dismiss">忽略草稿</button>
+      </div>
+      <div id="profile-form"></div>
+    </section>
+    <section class="panel" id="panel-applications">
+      <div class="apps-toolbar">
+        <input type="text" class="search" id="apps-search" placeholder="搜索公司 / 岗位…" />
+        <select id="apps-filter-status">
+          <option value="">全部状态</option>
+          <option value="已投递">已投递</option><option value="笔试">笔试</option>
+          <option value="面试">面试</option><option value="offer">offer</option><option value="挂了">挂了</option>
+        </select>
+        <button class="btn primary" id="btn-add-app">+ 手动添加</button>
+      </div>
+      <div id="apps-table-wrap"></div>
+    </section>
+  </div>
+  <div class="savebar" id="savebar">
+    <span class="status" id="save-status"></span>
+    <button class="btn" id="btn-reset">撤销修改</button>
+    <button class="btn primary" id="btn-save">保存信息库</button>
+  </div>
+
+  <script src="../lib/profile-schema.js"></script>
+  <script src="../lib/storage.js"></script>
+  <script src="../lib/vendor/pdf.min.js"></script>
+  <script src="../lib/vendor/mammoth.browser.min.js"></script>
+  <script src="../lib/resume-parser.js"></script>
+  <script src="../options/options.js"></script>
+</body>
+</html>
