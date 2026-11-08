@@ -1,0 +1,656 @@
+{
+  "__app__": "校招网申助手",
+  "__version__": 3,
+  "exportedAt": "2026-11-08T07:25:23.837Z",
+  "profile": {
+    "award": [
+      {
+        "awardDate": "2022-11",
+        "awardLevel": "国家级",
+        "awardName": "中国大学生程序设计竞赛（CCPC）女生专场 铜奖"
+      },
+      {
+        "awardDate": "2022-10",
+        "awardLevel": "国家级",
+        "awardName": "蓝桥杯全国总决赛 C/C++ 程序设计 B 组 三等奖"
+      },
+      {
+        "awardDate": "2022-11",
+        "awardLevel": "区级",
+        "awardName": "全国大学生数学建模竞赛 广西赛区 二等奖"
+      },
+      {
+        "awardDate": "2022-09",
+        "awardLevel": "区级",
+        "awardName": "广西大学生程序设计竞赛 二等奖"
+      },
+      {
+        "awardDate": "2022-11",
+        "awardLevel": "校级",
+        "awardName": "桂林电子科技大学 优秀学生三等奖学金"
+      },
+      {
+        "awardDate": "2026-10",
+        "awardLevel": "",
+        "awardName": "华东师范大学数据科学与工程学院学业基础奖学金"
+      }
+    ],
+    "basic": {
+      "birthDate": "2002-09-01",
+      "cf_mv4qjyhb1": "本人思想积极进取,品行端正,具有良好的责任心与团队协作精神。研究生期间就读于华东师范大学数据科学与工程专业,系统掌握了专业理论知识,学业表现稳健,并围绕大模型推理调度方向开展科研工作,具备扎实的工程能力与严谨的科研素养。在实践方面,曾于 SAP 等企业完成多段实习,参与 AI 迁移、云原生 DevOps及可观测体系建设等工作,熟练运用 Java、Python及主流后端与云技术栈,独立承担过多个项目的前后端与运维开发,工程落地能力得到实际检验。此外,曾参与国家自然科学基金项目,并在CCPC、蓝桥杯、数学建模等国家级竞赛中屡获奖项,体现了较强的学习能力与钻研精神。",
+      "cf_mv5gvxw539": "身份证",
+      "cf_mv5gvxw5775": "上海市普陀区中山北路3663",
+      "cf_mv5gvxw5953": "健康",
+      "cf_mv7xwm1u1": "AI / Agent：了解Harness / Loop / Graph Engineering 等工程范式；具备MCP / A2A、LLM 集成与Prompt 工程实践经验。",
+      "currentCity": "上海-普陀区",
+      "email": "chenbx16@foxmail.com",
+      "ethnicity": "汉族",
+      "gender": "女",
+      "height": "163",
+      "householdCity": "福建-泉州-惠安县",
+      "idCard": "350521200209014020",
+      "maritalStatus": "未婚",
+      "name": "陈冰鑫",
+      "nativePlace": "福建-泉州-惠安县",
+      "phone": "19198271243",
+      "politicalStatus": "共青团员",
+      "wechat": "",
+      "weight": "53"
+    },
+    "education": [
+      {
+        "academicDegree": "硕士",
+        "college": "数据科学与工程学院",
+        "degree": "硕士",
+        "enrollDate": "",
+        "gpa": "TOP20%",
+        "graduateDate": "",
+        "isUnified": "是",
+        "major": "数据科学与工程",
+        "rank": "",
+        "school": "华东师范大学",
+        "studyMode": "全日制"
+      },
+      {
+        "academicDegree": "学士",
+        "college": "计算机与信息安全学院",
+        "degree": "本科",
+        "enrollDate": "2020-09",
+        "gpa": "",
+        "graduateDate": "2024-06",
+        "isUnified": "",
+        "major": "计算机科学与技术（卓越班）",
+        "rank": "",
+        "school": "桂林电子科技大学",
+        "studyMode": ""
+      }
+    ],
+    "familyFlat": {
+      "fatherAge": "49",
+      "fatherCompany": "无",
+      "fatherName": "陈建山",
+      "fatherPhone": "13960378248",
+      "fatherPolitical": "群众",
+      "fatherTitle": "无",
+      "motherAge": "49",
+      "motherCompany": "无",
+      "motherName": "康美霞",
+      "motherPhone": "18965756935",
+      "motherPolitical": "群众",
+      "motherTitle": "无"
+    },
+    "intention": {
+      "availableDate": "",
+      "expectedCity": "",
+      "expectedPosition": "",
+      "expectedSalary": "",
+      "selfIntro": ""
+    },
+    "project": [
+      {
+        "description": "云实训 AI 试验场（腾讯合作）：基于 Vue2 独立开发实训作业页面与登录鉴权模块，通过后端中转短期 Token 完成 CloudStudio 嵌入集成；支撑千级并发、接口平均响应时间 < 150ms；基于 SpringBoot 微服务实现课程空间映射模块与全套 CRUD 接口。\nGitLab Runner 升级迁移：设计支持多分支并行构建与自动部署的 CI/CD 优化方案，构建部署整体效率提升约 30%。",
+        "endDate": "",
+        "projectName": "水杉在线：大规模个性化全民数字素养在线学习提升平台",
+        "role": "国家自然科学基金项目 | 前端 / 后端 / DevOps",
+        "startDate": "2024-09"
+      },
+      {
+        "description": "ECNU 2026 届毕业生个性化互动 H5 应用，独立承担全部前端开发；完成用户数据结构设计、技术选型、视觉风格设计与全页面交互开发，对接后端实现个性化剧情渲染；上线累计访问 3400+，本科毕业生覆盖率 41%、研究生覆盖率 25%。",
+        "endDate": "2026-06",
+        "projectName": "2026 数字毕业礼物 —— 互动数字漫剧（微信 H5）",
+        "role": "独立开发前端",
+        "startDate": "2025-11"
+      },
+      {
+        "description": "华东师大官方校园卡年度盘点 H5，独立完成前端全链路开发，包含用户数据结构设计、技术选型、像素风视觉设计以及全部页面交互；基于食堂、图书馆、门禁等多源校园数据生成师生个性化年度报告；上线访问 1.1 万+，覆盖全校约 30% 师生。",
+        "endDate": "",
+        "projectName": "ECNU 2025 校园卡年度回忆（微信 H5）",
+        "role": "独立开发前端",
+        "startDate": ""
+      }
+    ],
+    "skill": {
+      "certificates": "",
+      "cet4": "463",
+      "cet6": "",
+      "computerLevel": "",
+      "driverLicense": "",
+      "englishOther": "",
+      "skills": "专业技能：熟练使用Java、Python 完成日常开发，具备C/C++ 基础；熟练使用Git，了解GitLab CI/CD 流水线的基本使用；了解Linux 命令与Docker 基础，对Kubernetes 有一定了解；熟悉RESTful API 设计，能够使用Postman 进行接口联调与测试。\n技术框架：Spring Boot / Spring Cloud / MyBatis-Plus / MySQL / Redis / MongoDB / Vue。\nAI / Agent：了解 Harness / Loop / Graph Engineering 等工程范式；具备 MCP / A2A、LLM 集成与 Prompt 工程实践经验。\n英语技能：CET-4：463；可完成基本英语文献、技术文档阅读及日常交流。"
+    },
+    "work": [
+      {
+        "company": "SAP· CX Commerce Engineering China",
+        "description": "研发 AI 迁移 Harness PoC，实现 JSP Accelerator 向 Spartacus SPA 的 Agentic 自动化迁移。搭建编排器 + 多 Agent 协作架构（migrator / verifier / fixer），引入 Loop 迭代机制，设计结构化质量门禁与真实 DOM E2E 校验；相比资深顾问手工单客户迁移周期 4--5 个月，显著降低迁移人力成本；该方案已被 Peer Team 采纳并作为后续开发基础。\n完成 Shopping Agent 技术 PoC，将商品搜索、购物车、结账、订单物流查询完整购物流程封装为 Skills；基于 MCP + A2A 协议标准化能力并部署至 Kyma，支持 Sierra 通过 tool-call 完成端到端调用；该成果支撑 CX Commerce PE Q3 全员大会语音演示 Demo。",
+        "endDate": "",
+        "startDate": "2026-03",
+        "title": "STAR Program · 架构研究与开发实习生"
+      },
+      {
+        "company": "SAP· GTLC 团队",
+        "description": "开展 SAP BTP Kyma 集群技术验证：完成集群接入、多服务容器化部署与对外服务暴露，熟练使用 Deployment / Service / APIRule 完成资源编排。\n在 Kyma 环境搭建端到端可观测链路，部署 Loki + Grafana，通过 Kyma Telemetry LogPipeline 打通完整日志采集链路；沉淀 2 篇 集群部署与故障排查 Wiki 文档，在团队内部复用，降低新人上手成本。",
+        "endDate": "2026-02",
+        "startDate": "2025-08",
+        "title": "iXp 实习生 · Devops"
+      },
+      {
+        "company": "盖亚青柯（私募基金公司）",
+        "description": "使用 Python、Pandas 完成金融交易数据清洗预处理，数据处理耗时缩短 60%；基于 MongoDB 设计存储模型，开发自动化对账脚本，替代人工核对流程。",
+        "endDate": "2024-04",
+        "startDate": "2024-03",
+        "title": "全栈开发实习生"
+      }
+    ]
+  },
+  "applications": [
+    {
+      "company": "boss直聘",
+      "date": "2026-11-07",
+      "id": "app_1794057290999_2383",
+      "note": "",
+      "position": "前端/后端",
+      "status": "已投递",
+      "url": ""
+    },
+    {
+      "company": "fastlane",
+      "date": "2026-11-07",
+      "id": "app_1794056737623_6397",
+      "note": "应聘记录 - 加入Fastlane",
+      "position": "AI全栈研发工程师",
+      "status": "已投递",
+      "url": "https://fastbase.jobs.feishu.cn/588906/position/application"
+    },
+    {
+      "company": "中金所技术公司",
+      "date": "2026-11-07",
+      "id": "app_1794056308514_3468",
+      "note": "中金所技术公司招聘门户",
+      "position": "软件开发工程师-Agent研发",
+      "status": "已投递",
+      "url": "https://cffexit.zhiye.com/personal/deliveryRecord"
+    },
+    {
+      "company": "晋华人才招聘",
+      "date": "2026-11-07",
+      "id": "app_1794054189539_3748",
+      "note": "晋华人才招聘",
+      "position": "软件工程师（泉州）",
+      "status": "已投递",
+      "url": "https://www.jhicc.com/Recruiting/Campus/Index#"
+    },
+    {
+      "company": "plaud",
+      "date": "2026-11-07",
+      "id": "app_1794051808566_3203",
+      "note": "应聘记录 - 加入Plaud",
+      "position": "独立站开发工程师",
+      "status": "已投递",
+      "url": "https://nicebuild.jobs.feishu.cn/index/position/application"
+    },
+    {
+      "company": "朴朴招聘官网",
+      "date": "2026-11-07",
+      "id": "app_1794050725577_9761",
+      "note": "朴朴招聘官网",
+      "position": "研发工程师/服务端",
+      "status": "已投递",
+      "url": "https://jobs.pupumall.net/recruit-webapp/candidate/school/applyForTheRecord?frontRecruitType=SCHOOL"
+    },
+    {
+      "company": "云鲸智能",
+      "date": "2026-11-07",
+      "id": "app_1794050018350_9357",
+      "note": "云鲸智能",
+      "position": "云原生工程师",
+      "status": "已投递",
+      "url": "https://careers.narwal.com/personal/deliveryRecord"
+    },
+    {
+      "company": "地平线招聘官网",
+      "date": "2026-11-07",
+      "id": "app_1794048778696_2819",
+      "note": "地平线招聘官网",
+      "position": "BSP软件开发工程师",
+      "status": "已投递",
+      "url": "https://wecruit.hotjob.cn/SU6409ef49bef57c635fd390a6/pb/account.html#/myDeliver"
+    },
+    {
+      "company": "momenta",
+      "date": "2026-11-07",
+      "id": "app_1794047460172_9336",
+      "note": "应聘记录 - Momenta Campus",
+      "position": "系统集成工程师",
+      "status": "已投递",
+      "url": "https://momenta.jobs.feishu.cn/campus/position/application"
+    },
+    {
+      "company": "顺丰2027届校园招聘",
+      "date": "2026-11-07",
+      "id": "app_1794046673749_9482",
+      "note": "顺丰2027届校园招聘",
+      "position": "AI应用工程师",
+      "status": "已投递",
+      "url": "https://campus.sf-express.com/#/personalCenter?activeTab=2"
+    },
+    {
+      "company": "XTransfer",
+      "date": "2026-11-07",
+      "id": "app_1794045059348_9693",
+      "note": "XTransfer",
+      "position": "后端/全栈",
+      "status": "已投递",
+      "url": "https://xtransfer.zhiye.com/personal/deliveryRecord"
+    },
+    {
+      "company": "深南电路招聘",
+      "date": "2026-11-01",
+      "id": "app_1793551867051_8253",
+      "note": "深南电路招聘",
+      "position": "FDE岗（前沿部署工程师）",
+      "status": "已投递",
+      "url": "https://scc.zhiye.com/personal/deliveryRecord"
+    },
+    {
+      "company": "拓竹",
+      "date": "2026-11-01",
+      "id": "app_1793550152963_9132",
+      "note": "应聘记录 - 欢迎加入拓竹科技",
+      "position": "后端工程师 - 云服务方向",
+      "status": "已投递",
+      "url": "https://bambulab.jobs.feishu.cn/campus/position/application"
+    },
+    {
+      "company": "安克创新",
+      "date": "2026-11-01",
+      "id": "app_1793549194628_3963",
+      "note": "应聘记录 - 安克创新校招：成为创造者，激发可能",
+      "position": "AI应用工程师",
+      "status": "已投递",
+      "url": "https://anker-in.jobs.feishu.cn/campushirecn/position/application"
+    },
+    {
+      "company": "腾讯音乐娱乐招聘",
+      "date": "2026-11-01",
+      "id": "app_1793547541360_7288",
+      "note": "我的投递 | 腾讯音乐娱乐招聘",
+      "position": "AI应用工程师",
+      "status": "已投递",
+      "url": "https://join.tencentmusic.com/deliver"
+    },
+    {
+      "company": "字节跳动",
+      "date": "2026-11-01",
+      "id": "app_1793545687647_7300",
+      "note": "应聘记录 - 加入字节跳动",
+      "position": "AI应用开发工程师",
+      "status": "已投递",
+      "url": "https://jobs.bytedance.com/campus/position/application"
+    },
+    {
+      "company": "amazon",
+      "date": "2026-11-01",
+      "id": "app_1793533460334_37",
+      "note": "申请 | 亚马逊求职网站",
+      "position": "solutions architect",
+      "status": "已投递",
+      "url": "https://account.amazon.jobs/zh-CN/applicant"
+    },
+    {
+      "company": "携程集团招聘官网",
+      "date": "2026-10-31",
+      "id": "app_1793442791304_2644",
+      "note": "携程集团招聘官网",
+      "position": "Agent开发工程师",
+      "status": "已投递",
+      "url": "https://job.ctrip.com/#/personal-homepage"
+    },
+    {
+      "company": "沐曦股份",
+      "date": "2026-10-31",
+      "id": "app_1793431189154_2156",
+      "note": "沐曦股份 - 校园招聘",
+      "position": "CI/CD平台研发工程师",
+      "status": "已投递",
+      "url": "https://recruitment.metax-tech.com/campus-recruitment/metax-tech/58131#/candidateHome/applications"
+    },
+    {
+      "company": "FUTU富途",
+      "date": "2026-10-31",
+      "id": "app_1793429635225_8040",
+      "note": "FUTU 2027 Campus Recruitment",
+      "position": "AI Agent Engineer",
+      "status": "已投递",
+      "url": "https://app.mokahr.com/campus-recruitment/futu5/141186#/candidateHome/applications"
+    },
+    {
+      "company": "中国平安校园招聘",
+      "date": "2026-10-30",
+      "id": "app_1793381735093_4890",
+      "note": "中国平安校园招聘",
+      "position": "AI应用研发工程师",
+      "status": "已投递",
+      "url": "https://campus.pingan.com/personalcenter/center"
+    },
+    {
+      "company": "联想",
+      "date": "2026-10-30",
+      "id": "app_1793378360376_4540",
+      "note": "我的申请",
+      "position": "AI应用开发工程师",
+      "status": "挂了",
+      "url": "https://talent.lenovo.com.cn/account/apply"
+    },
+    {
+      "company": "芯联集成电路制造股份有限公司",
+      "date": "2026-10-30",
+      "id": "app_1793377327304_8606",
+      "note": "芯联集成电路制造股份有限公司",
+      "position": "AI编程工程师（2027）(J10992)",
+      "status": "已投递",
+      "url": "https://smec.zhiye.com/personal/deliveryRecord"
+    },
+    {
+      "company": "得物",
+      "date": "2026-10-30",
+      "id": "app_1793361970802_4994",
+      "note": "应聘记录 - 得物App校园招聘",
+      "position": "Golang开发工程师",
+      "status": "已投递",
+      "url": "https://campus.dewu.com/578078/position/application"
+    },
+    {
+      "company": "快手校招",
+      "date": "2026-10-30",
+      "id": "app_1793359330209_9865",
+      "note": "快手校招 - 快手校招-投递记录",
+      "position": "数据FDE工程师-数据研发方向",
+      "status": "已投递",
+      "url": "https://campus.kuaishou.cn/recruit/campus/e/#/campus/my-apply"
+    },
+    {
+      "company": "万兴科技2027届全球校园招聘",
+      "date": "2026-10-30",
+      "id": "app_1793357589123_162",
+      "note": "万兴科技2027届全球校园招聘",
+      "position": "理Agent开发工程师",
+      "status": "已投递",
+      "url": "https://wondersharecampus.zhiye.com/personal/deliveryRecord"
+    },
+    {
+      "company": "深圳市路特创新科技有限公司",
+      "date": "2026-10-30",
+      "id": "app_1793357144115_3224",
+      "note": "深圳市路特创新科技有限公司 - 校园招聘",
+      "position": "理Agent开发工程师",
+      "status": "已投递",
+      "url": "https://app.mokahr.com/campus-recruitment/rootglobal/44850?recommendCode=DS8qq7ze#/candidateHome/applications"
+    },
+    {
+      "company": "网易互娱校招官网",
+      "date": "2026-10-30",
+      "id": "app_1793354882727_9782",
+      "note": "网易互娱校招官网",
+      "position": "基础架构研发工程师/大数据平台研发工程师",
+      "status": "已投递",
+      "url": "https://campus.game.163.com/app/personal/apply"
+    },
+    {
+      "company": "SHEIN校园招聘",
+      "date": "2026-10-30",
+      "id": "app_1793352442870_1471",
+      "note": "SHEIN校园招聘",
+      "position": "APP研发工程师",
+      "status": "已投递",
+      "url": "https://app.mokahr.com/campus-recruitment/shein/2932?recommendCode=DSnw7AXS#/candidateHome/applications"
+    },
+    {
+      "company": "寻影obsbot",
+      "date": "2026-10-30",
+      "id": "app_1793351070166_8730",
+      "note": "应聘记录 - 加入OBSBOT寻影",
+      "position": "devops开发工程师",
+      "status": "已投递",
+      "url": "https://n8r2cr07gk.jobs.feishu.cn/920634/position/application?share_token=MzsxNzg5ODAzMzcyMjQ1Ozc1NzY5NDg4OTUwODQzOTg4OTQ7MDsxLzI"
+    },
+    {
+      "company": "烟草",
+      "date": "2026-10-27",
+      "id": "app_1793101771865_4285",
+      "note": "考生管理系统",
+      "position": "",
+      "status": "已投递",
+      "url": "http://bm.cpta.com.cn/yc2027/user.html"
+    },
+    {
+      "company": "宁德时代",
+      "date": "2026-10-20",
+      "id": "app_1792489889877_7720",
+      "note": "宁德时代 - 校园招聘",
+      "position": "AI Agent 产品与算法创新工程师",
+      "status": "已投递",
+      "url": "https://app.mokahr.com/campus-recruitment/catlhr/148948#/candidateHome/applications"
+    },
+    {
+      "company": "美团",
+      "date": "2026-10-16",
+      "id": "app_1792153176366_1908",
+      "note": "个人中心 | 美团招聘",
+      "position": "AI应用开发工程师",
+      "status": "笔试",
+      "url": "https://zhaopin.meituan.com/web/personal-center/delivery-record"
+    },
+    {
+      "company": "百度校园招聘",
+      "date": "2026-10-16",
+      "id": "app_1792149008214_6099",
+      "note": "百度校园招聘",
+      "position": "Agent Harness 研发工程师",
+      "status": "挂了",
+      "url": "https://talent.baidu.com/jobs/center"
+    },
+    {
+      "company": "Shopee",
+      "date": "2026-10-14",
+      "id": "app_1791972230140_6994",
+      "note": "Shopee 校园招聘",
+      "position": "agent开发工程师",
+      "status": "挂了",
+      "url": "https://app.mokahr.com/campus_apply/shopee/2962?recommendCode=DSRCTeAG#/candidateHome/applications"
+    },
+    {
+      "company": "bilibili",
+      "date": "2026-10-14",
+      "id": "app_1791971015934_9550",
+      "note": "哔哩哔哩-招聘",
+      "position": "电商大数据开发工程师",
+      "status": "笔试",
+      "url": "https://jobs.bilibili.com/campus/records"
+    },
+    {
+      "company": "长鑫存储技术有限公司",
+      "date": "2026-10-13",
+      "id": "app_1791910847031_704",
+      "note": "长鑫存储技术有限公司",
+      "position": "软件系统开发",
+      "status": "笔试",
+      "url": "https://cxmt.zhiye.com/personal/deliveryRecord"
+    },
+    {
+      "company": "中兴通讯",
+      "date": "2026-10-13",
+      "id": "app_1791902726220_2955",
+      "note": "中兴通讯 - 校园招聘",
+      "position": "软件开发工程师",
+      "status": "已投递",
+      "url": "https://app.mokahr.com/campus-recruitment/zte/46903#/candidateHome/applications"
+    },
+    {
+      "company": "中兴国际",
+      "date": "2026-10-13",
+      "id": "app_1791900149589_5256",
+      "note": "开的低，工作不自由，取消面试",
+      "position": "应用程序开发工程师",
+      "status": "面试",
+      "url": "https://smics.zhiye.com/Portal/Apply/Index"
+    },
+    {
+      "company": "小红书",
+      "date": "2026-10-13",
+      "id": "app_1791897141121_4472",
+      "note": "小红书校园招聘",
+      "position": "产品工程师",
+      "status": "挂了",
+      "url": "https://job.xiaohongshu.com/campus/position/22481"
+    },
+    {
+      "company": "中国邮政",
+      "date": "2026-10-12",
+      "id": "app_1791825143180_1795",
+      "note": "投递进程_我的校园_智联校园招聘_智联招聘",
+      "position": "信息技术岗",
+      "status": "已投递",
+      "url": "https://xiaoyuan.zhaopin.com/scrd/phase/process?projectId=105582"
+    },
+    {
+      "company": "京东",
+      "date": "2026-10-12",
+      "id": "app_1791821971372_4488",
+      "note": "我的投递 | 京东校园招聘",
+      "position": "前端开发工程师",
+      "status": "笔试",
+      "url": "https://campus.jd.com/api/wx/position/index?type=present#/myDeliver"
+    },
+    {
+      "company": "腾讯校园招聘",
+      "date": "2026-10-12",
+      "id": "app_1791777076627_4397",
+      "note": "应聘进度 | 腾讯校招",
+      "position": "AI应用工程师",
+      "status": "已投递",
+      "url": "https://join.qq.com/progress.html"
+    },
+    {
+      "company": "蚂蚁集团招聘官网",
+      "date": "2026-10-09",
+      "id": "app_1791735025478_5892",
+      "note": "蚂蚁集团招聘官网",
+      "position": "智能体与大模型应用工程",
+      "status": "笔试",
+      "url": "https://talent.antgroup.com/personal/campus-application"
+    },
+    {
+      "company": "波克boke",
+      "date": "2026-09-25",
+      "id": "app_1791734936380_7571",
+      "note": "应聘记录 - 波克校园招聘",
+      "position": "应用研发工程师",
+      "status": "已投递",
+      "url": "https://boke.jobs.feishu.cn/581609/position/application?share_token=MzsxNzg2OTQ5NzI0NDAxOzc2NzQ4ODg3MzczMTkxMTA5Mzk7MDsxLzI"
+    },
+    {
+      "company": "华为",
+      "date": "2026-10-11",
+      "id": "app_1791734713111_2984",
+      "note": "个人中心",
+      "position": "软件开发工程师-通用软件",
+      "status": "面试",
+      "url": "https://career.huawei.com/cn/personal-center?pageType=myApplication&recType=CR"
+    },
+    {
+      "company": "拼多多集团",
+      "date": "2026-10-11",
+      "id": "app_1791733992220_7690",
+      "note": "拼多多集团-PDD校园招聘官网",
+      "position": "Web前端研发工程师",
+      "status": "挂了",
+      "url": "https://careers.pddglobalhr.com/campus/personal-center"
+    }
+  ],
+  "settings": {
+    "autoOpenSidebar": false
+  },
+  "customSchema": {
+    "groups": [
+      {
+        "custom": true,
+        "fields": [
+          {
+            "aliases": [
+              "自我评价",
+              "自我介绍"
+            ],
+            "custom": true,
+            "key": "cf_mv4qjyhb1",
+            "label": "自我评价",
+            "type": "text"
+          },
+          {
+            "aliases": [
+              "证件号码类型"
+            ],
+            "custom": true,
+            "key": "cf_mv5gvxw539",
+            "label": "证件号码类型",
+            "type": "text"
+          },
+          {
+            "aliases": [
+              "健康状况"
+            ],
+            "custom": true,
+            "key": "cf_mv5gvxw5953",
+            "label": "健康状况",
+            "type": "text"
+          },
+          {
+            "aliases": [
+              "通信地址"
+            ],
+            "custom": true,
+            "key": "cf_mv5gvxw5775",
+            "label": "通信地址",
+            "type": "text"
+          },
+          {
+            "aliases": [
+              "AI技能"
+            ],
+            "custom": true,
+            "key": "cf_mv7xwm1u1",
+            "label": "AI技能",
+            "type": "text"
+          }
+        ],
+        "key": "basic",
+        "label": "基本信息",
+        "repeatable": false
+      }
+    ]
+  },
+  "llmConfig": {
+    "baseUrl": "https://chat.ecnu.edu.cn/open/api/v1",
+    "model": "ecnu-plus",
+    "enabled": true
+  }
+}

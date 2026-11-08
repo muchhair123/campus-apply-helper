@@ -153,3 +153,27 @@ table.apps a:hover { text-decoration: underline; }
 .st-面试 { color: #9333ea; }
 .st-offer { color: #16a34a; }
 .st-挂了 { color: #9ca3af; }
+
+/* AI 设置卡片 */
+.ai-card {
+  background: #faf5ff;
+  border: 1px solid #e9d5ff;
+  border-radius: 10px;
+  padding: 18px;
+  margin-bottom: 18px;
+}
+.ai-card h3 { margin: 0 0 8px; font-size: 14px; color: #6d28d9; }
+.ai-note { font-size: 12px; color: var(--muted); line-height: 1.6; margin: 0 0 14px; }
+.ai-note strong { color: #7c3aed; }
+.ai-f { display: block; font-size: 12px; color: var(--muted); margin-bottom: 12px; }
+.ai-f input {
+  display: block; width: 100%; margin-top: 5px;
+  padding: 8px 10px; border: 1px solid var(--border); border-radius: 6px;
+  font-size: 13px; color: var(--text); box-sizing: border-box;
+}
+.ai-f input:focus { outline: none; border-color: #a78bfa; box-shadow: 0 0 0 2px #ede9fe; }
+.ai-ck { display: flex; align-items: center; gap: 6px; font-size: 13px; color: var(--text); margin-bottom: 14px; }
+.ai-actions { display: flex; align-items: center; gap: 10px; }
+.ai-status { font-size: 12px; color: var(--muted); }
+.ai-status.ok { color: #16a34a; }
+.ai-status.err { color: #dc2626; }

@@ -9,6 +9,8 @@
   <script src="../lib/vendor/mammoth.browser.min.js"></script>
   <script src="../lib/resume-parser.js"></script>
   <script>
+    // 测试环境无 chrome.runtime，手动把 pdf.js worker 指到相对路径
+    if (window.pdfjsLib) window.pdfjsLib.GlobalWorkerOptions.workerSrc = '../lib/vendor/pdf.worker.min.js';
     const out = document.getElementById('out');
     window.__parsePdf = async function (url) {
       const resp = await fetch(url);

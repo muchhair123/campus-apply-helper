@@ -39,6 +39,28 @@
 
       <!-- 字段表单（由 JS 按 schema 渲染） -->
       <div id="profile-form"></div>
+
+      <!-- AI 设置：用户自带 OpenAI 兼容接口（base_url + key + model），全本地存储 -->
+      <div class="ai-card" id="ai-card">
+        <h3>🤖 AI 辅助填写设置（可选）</h3>
+        <p class="ai-note">填入你自己的大模型接口，侧边栏「🤖 AI 辅助填写」会用它对启发式填不中的字段做语义对齐。
+          <strong>只发送字段名称，不发送任何字段值</strong>；Key 仅存在本地浏览器、不随「导出备份」外带。</p>
+        <label class="ai-f">API 地址 (base_url)
+          <input type="text" id="ai-baseurl" placeholder="如 https://api.openai.com/v1 或 https://api.deepseek.com/v1" />
+        </label>
+        <label class="ai-f">API Key
+          <input type="password" id="ai-apikey" placeholder="sk-..." autocomplete="off" />
+        </label>
+        <label class="ai-f">模型名 (model)
+          <input type="text" id="ai-model" placeholder="如 gpt-4o-mini / deepseek-chat / moonshot-v1-8k" />
+        </label>
+        <label class="ai-ck"><input type="checkbox" id="ai-enabled" /> 启用 AI 辅助</label>
+        <div class="ai-actions">
+          <button class="btn" id="btn-ai-test">测试连接</button>
+          <button class="btn primary" id="btn-ai-save">保存 AI 设置</button>
+          <span class="ai-status" id="ai-status"></span>
+        </div>
+      </div>
     </section>
 
     <!-- ===== Tab 2: 投递记录 ===== -->
@@ -68,6 +90,7 @@
 
   <script src="../lib/profile-schema.js"></script>
   <script src="../lib/storage.js"></script>
+  <script src="../lib/ai-matcher.js"></script>
   <script src="../lib/vendor/pdf.min.js"></script>
   <script src="../lib/vendor/mammoth.browser.min.js"></script>
   <script src="../lib/resume-parser.js"></script>

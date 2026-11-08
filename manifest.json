@@ -14,6 +14,7 @@
       "js": [
         "lib/profile-schema.js",
         "lib/field-matcher.js",
+        "lib/ai-matcher.js",
         "content/content.js"
       ],
       "run_at": "document_idle",
@@ -26,6 +27,15 @@
       "matches": ["<all_urls>"]
     }
   ],
+  "commands": {
+    "start-selection-fill": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+S",
+        "mac": "Command+Shift+S"
+      },
+      "description": "启动选区填写（框选页面某区域只填该区）"
+    }
+  },
   "action": {
     "default_popup": "popup/popup.html",
     "default_title": "校招网申助手",

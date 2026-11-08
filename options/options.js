@@ -449,11 +449,55 @@ $('#import-file').addEventListener('change', async (e) => {
 });
 
 // ======================= 初始化 =======================
+// ======================= AI 设置 =======================
+async function loadAISettings() {
+  const cfg = await AHStorage.getLLMConfig();
+  $('#ai-baseurl').value = cfg.baseUrl || '';
+  $('#ai-apikey').value = cfg.apiKey || '';
+  $('#ai-model').value = cfg.model || '';
+  $('#ai-enabled').checked = !!cfg.enabled;
+}
+function readAIForm() {
+  return {
+    baseUrl: $('#ai-baseurl').value.trim(),
+    apiKey: $('#ai-apikey').value.trim(),
+    model: $('#ai-model').value.trim(),
+    enabled: $('#ai-enabled').checked,
+  };
+}
+function setAIStatus(msg, kind) {
+  const el = $('#ai-status');
+  el.textContent = msg;
+  el.className = 'ai-status' + (kind ? ' ' + kind : '');
+}
+$('#btn-ai-save').addEventListener('click', async () => {
+  await AHStorage.saveLLMConfig(readAIForm());
+  setAIStatus('✓ 已保存', 'ok');
+  setTimeout(() => setAIStatus(''), 2500);
+});
+$('#btn-ai-test').addEventListener('click', async () => {
+  const cfg = readAIForm();
+  if (!cfg.baseUrl || !cfg.apiKey || !cfg.model) { setAIStatus('请先填完地址/Key/模型', 'err'); return; }
+  setAIStatus('测试中…');
+  try {
+    // 用一个最小映射请求验证接口可用（只发示例字段名，不含任何真实值）
+    const r = await window.AH_AI.matchByLLM(
+      [{ id: 'p0', label: '姓名' }],
+      [{ key: 'basic.name', label: '姓名' }],
+      cfg
+    );
+    setAIStatus('✓ 连接成功，接口可用', 'ok');
+  } catch (e) {
+    setAIStatus('✗ ' + e.message, 'err');
+  }
+});
+
 (async function init() {
   profileState = await AHStorage.getProfile();
   customSchema = await AHStorage.getCustomSchema();
   rebuildSchema();
   renderProfileForm();
+  await loadAISettings();
   await checkPendingDraft();
   // 根据 hash 定位 tab
   const hash = (location.hash || '').replace('#', '');

@@ -43,3 +43,15 @@ chrome.runtime.onMessage.addListener((msg, sender, sendResponse) => {
 
   return false;
 });
+
+// 快捷键：启动选区填写 → 向当前活动标签页转发
+chrome.commands.onCommand.addListener((command) => {
+  if (command !== 'start-selection-fill') return;
+  chrome.tabs.query({ active: true, currentWindow: true }, (tabs) => {
+    const tab = tabs[0];
+    if (!tab?.id) return;
+    chrome.tabs.sendMessage(tab.id, { type: 'START_SELECTION_FILL' }, () => {
+      if (chrome.runtime.lastError) { /* 未注入的页面忽略 */ }
+    });
+  });
+});

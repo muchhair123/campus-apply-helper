@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>选区填写测试</title>
+  <style>
+    body { font-family: sans-serif; max-width: 760px; margin: 20px auto; }
+    section { border: 1px solid #ddd; border-radius: 8px; padding: 16px; margin: 20px 0; }
+    h3 { margin-top: 0; }
+    .row { margin: 10px 0; }
+    label { display: inline-block; width: 110px; }
+    input, select { padding: 5px; }
+  </style>
+</head>
+<body>
+  <h1>选区填写测试页</h1>
+
+  <section id="sec-a" class="ah-test-form">
+    <h3>区块 A：基本信息</h3>
+    <div class="row"><label for="a-name">姓名</label><input id="a-name" type="text"></div>
+    <div class="row"><label for="a-phone">手机号码</label><input id="a-phone" type="text"></div>
+    <div class="row"><label for="a-email">电子邮箱</label><input id="a-email" type="email"></div>
+  </section>
+
+  <section id="sec-b" class="ah-test-form">
+    <h3>区块 B：教育信息</h3>
+    <div class="row"><label for="b-school">毕业院校</label><input id="b-school" type="text"></div>
+    <div class="row"><label for="b-major">专业</label><input id="b-major" type="text"></div>
+  </section>
+
+  <script src="mock-chrome.js"></script>
+  <script>
+    chrome.storage.local.set({ profile: {
+      basic: { name: '李四', phone: '13900139000', email: 'lisi@example.com' },
+      education: [{ school: '北京大学', major: '软件工程', degree: '本科' }],
+    }});
+  </script>
+  <script src="../lib/profile-schema.js"></script>
+  <script src="../lib/field-matcher.js"></script>
+  <script src="../content/content.js"></script>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <title>AI 辅助填写测试</title>
+  <style>
+    body { font-family: sans-serif; max-width: 700px; margin: 20px auto; }
+    .row { margin: 10px 0; }
+    label { display: inline-block; width: 160px; }
+    input { padding: 5px; }
+  </style>
+</head>
+<body>
+  <h1>AI 辅助填写测试页</h1>
+  <!-- 第一个字段标签标准（启发式能中）；后两个标签刁钻（启发式中不了，留给 AI） -->
+  <div class="row"><label for="f1">姓名</label><input id="f1" type="text"></div>
+  <div class="row"><label for="f2">本人的流动电话番号</label><input id="f2" type="text"></div>
+  <div class="row"><label for="f3">就读高校全称</label><input id="f3" type="text"></div>
+
+  <script src="mock-chrome.js"></script>
+  <script>
+    chrome.storage.local.set({
+      profile: {
+        basic: { name: '王五', phone: '13700137000' },
+        education: [{ school: '复旦大学', major: '新闻学', degree: '本科' }],
+      },
+      llmConfig: { baseUrl: 'https://mock.local/v1', apiKey: 'sk-mock', model: 'mock-model', enabled: true },
+    });
+    // mock LLM：拦截 fetch，按标签返回映射（f2→手机，f3→学校）
+    const realFetch = window.fetch;
+    window.__lastFetchBody = null;
+    window.fetch = async (url, opts) => {
+      window.__lastFetchBody = opts && opts.body ? opts.body : '';
+      return {
+        ok: true,
+        json: async () => ({
+          choices: [{ message: { content: JSON.stringify({
+            mappings: [
+              { pageId: 'p0', fieldKey: 'basic.phone' },
+              { pageId: 'p1', fieldKey: 'education.school' },
+            ],
+          }) } }],
+        }),
+      };
+    };
+  </script>
+  <script src="../lib/profile-schema.js"></script>
+  <script src="../lib/field-matcher.js"></script>
+  <script src="../lib/ai-matcher.js"></script>
+  <script src="../content/content.js"></script>
+</body>
+</html>

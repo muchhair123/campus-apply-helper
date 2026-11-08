@@ -27,7 +27,7 @@
   chrome.runtime = {
     sendMessage: (msg, cb) => setTimeout(() => cb && cb({ ok: true }), 0),
     openOptionsPage: () => console.log('[mock] openOptionsPage'),
-    getURL: (p) => p,
+    getURL: (p) => '../' + p, // 测试页在 /test/ 下，扩展资源在上一级
     onMessage: { addListener: (fn) => __listeners.push(fn) },
     lastError: null,
   };
